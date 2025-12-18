@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI-Агрегатор 2026 — бизнес на доступе к 50+ нейросетям</title>
+  <meta name="description" content="Одностраничный сайт для GitHub Pages: продавай доступ к 50+ нейросетям (Kie.ai) и зарабатывай на марже ×2 с каждой генерации. Главный CTA: Telegram @dmitriy_ferixdi" />
+  <meta name="theme-color" content="#0a0f1f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="AI Future Brain">
+      <span class="brandDot"></span>
+      <span>AI Future Brain</span>
+    </a>
+
+    <nav class="nav">
+      <a href="#logic">Логика</a>
+      <a href="#marketing">Маркетинг</a>
+      <a href="#stack">Техчасть</a>
+      <a href="#calc">Калькулятор</a>
+    </nav>
+
+    <a class="btn btnPrimary btnSmall" href="https://t.me/dmitriy_ferixdi" target="_blank" rel="noopener">
+      Написать в Telegram
+    </a>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="heroBg" aria-hidden="true">
+        <div class="orb o1"></div>
+        <div class="orb o2"></div>
+        <div class="orb o3"></div>
+        <div class="gridGlow"></div>
+      </div>
+
+      <div class="container heroGrid">
+        <div class="heroCopy">
+          <div class="pill">
+            <span class="pillDot"></span>
+            Бизнес‑план 2026 · личный AI‑агрегатор · 50+ моделей
+          </div>
+
+          <h1>
+            Не «генерируй контент».
+            <span class="grad">Продавай доступ к генерации</span>
+            и зарабатывай на марже ×2.
+          </h1>
+
+          <p class="lead">
+            Ты запускаешь Telegram‑бота на базе <b>Kie.ai</b> (видео/фото/музыка/текст),
+            ставишь свою цену для клиентов — и получаешь прибыль с каждой операции:
+            <b>10 ₽ закупка → 20 ₽ клиент</b>.
+          </p>
+
+          <div class="heroActions">
+            <a class="btn btnPrimary" href="https://t.me/dmitriy_ferixdi" target="_blank" rel="noopener">
+              Хочу запуск · написать @dmitriy_ferixdi
+            </a>
+            <a class="btn btnGhost" href="#logic">Показать бизнес‑логику</a>
+          </div>
+
+          <div class="heroStats">
+            <div class="stat">
+              <div class="statNum">50+</div>
+              <div class="statLbl">моделей в одном интерфейсе</div>
+            </div>
+            <div class="stat">
+              <div class="statNum">×2</div>
+              <div class="statLbl">маржа с каждой генерации</div>
+            </div>
+            <div class="stat">
+              <div class="statNum">Telegram</div>
+              <div class="statLbl">продаёшь удобство без VPN</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="heroPanel" role="region" aria-label="Демо логики">
+          <div class="panelTop">
+            <div class="dots" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="panelTitle">Поток денег · на пальцах</div>
+          </div>
+
+          <div class="panelBody">
+            <div class="flow">
+              <div class="node">
+                <div class="nodeIcon">🧑‍💻</div>
+                <div>
+                  <div class="nodeT">Ты</div>
+                  <div class="nodeD">ставишь цены / пакеты</div>
+                </div>
+              </div>
+              <div class="arrow" aria-hidden="true"></div>
+              <div class="node">
+                <div class="nodeIcon">🤖</div>
+                <div>
+                  <div class="nodeT">Бот</div>
+                  <div class="nodeD">единый интерфейс 50+ AI</div>
+                </div>
+              </div>
+              <div class="arrow" aria-hidden="true"></div>
+              <div class="node">
+                <div class="nodeIcon">👥</div>
+                <div>
+                  <div class="nodeT">Клиенты</div>
+                  <div class="nodeD">платят за комфорт</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="priceRow">
+              <div class="priceCard">
+                <div class="k">Закупка (Kie.ai)</div>
+                <div class="v"><span id="buyPriceLabel">10</span> ₽</div>
+                <div class="s">себестоимость генерации</div>
+              </div>
+              <div class="priceCard hi">
+                <div class="k">Цена клиенту</div>
+                <div class="v"><span id="sellPriceLabel">20</span> ₽</div>
+                <div class="s">твоя витрина</div>
+              </div>
+              <div class="priceCard profit">
+                <div class="k">Прибыль</div>
+                <div class="v"><span id="profitLabel">10</span> ₽</div>
+                <div class="s">с каждой операции</div>
+              </div>
+            </div>
+
+            <div class="miniControls">
+              <label class="field">
+                <span>Закупка</span>
+                <input id="buyPrice" type="number" min="0" value="10" />
+              </label>
+              <label class="field">
+                <span>Цена клиенту</span>
+                <input id="sellPrice" type="number" min="0" value="20" />
+              </label>
+              <div class="note">
+                Фокус сайта: <b>заработок на доступе</b>, а не «самому генерить».
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marqueeTrack">
+          <span>Text‑to‑Video</span><i>•</i>
+          <span>Image‑to‑Video</span><i>•</i>
+          <span>Фотореализм</span><i>•</i>
+          <span>Стилизация</span><i>•</i>
+          <span>Аватары / Lip‑Sync</span><i>•</i>
+          <span>Музыка</span><i>•</i>
+          <span>SEO‑копирайтинг</span><i>•</i>
+          <span>Маркетинг‑креативы</span><i>•</i>
+          <span>Пакеты / подписка</span><i>•</i>
+          <span>Маржа ×2</span><i>•</i>
+          <span>Telegram‑оплата</span><i>•</i>
+          <span>Без VPN</span><i>•</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGIC -->
+    <section id="logic" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Логика: ты продаёшь «удочки», а не «рыбу»</h2>
+          <p>
+            Рынок генеративки перегрет: контента много, конкуренции — ещё больше.
+            Деньги — на втором уровне: <b>доступ к генерации</b> (удобно, быстро, по‑русски, без боли).
+          </p>
+        </div>
+
+        <div class="cards3">
+          <article class="card">
+            <div class="cardIcon">🧩</div>
+            <h3>Единая витрина</h3>
+            <p>50+ моделей через Kie.ai в одном месте. Пользователь не думает, где «какая нейронка».</p>
+          </article>
+          <article class="card">
+            <div class="cardIcon">💳</div>
+            <h3>Комфорт = деньги</h3>
+            <p>Без VPN, без «зарубежных карт», без английского интерфейса. Telegram — понятная дверь.</p>
+          </article>
+          <article class="card">
+            <div class="cardIcon">📈</div>
+            <h3>Маржа ×2</h3>
+            <p>Ты выставляешь цену в 2 раза выше закупки. Прибыль считается прозрачно, на каждой операции.</p>
+          </article>
+        </div>
+
+        <div class="timeline">
+          <div class="tItem">
+            <div class="tDot"></div>
+            <div class="tBody">
+              <div class="tTitle">1) Клиент хочет результат</div>
+              <div class="tText">Ему важно «сделай мне баннер / ролик / аватар», а не разбираться в моделях.</div>
+            </div>
+          </div>
+          <div class="tItem">
+            <div class="tDot"></div>
+            <div class="tBody">
+              <div class="tTitle">2) Ты даёшь кнопки и пакеты</div>
+              <div class="tText">Тарифы, лимиты, подписка. Максимально простые сценарии.</div>
+            </div>
+          </div>
+          <div class="tItem">
+            <div class="tDot"></div>
+            <div class="tBody">
+              <div class="tTitle">3) Ты зарабатываешь на обороте</div>
+              <div class="tText">Чем больше запросов — тем больше прибыль. Не «один заказ», а повторяемая модель.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ctaBand">
+          <div>
+            <div class="ctaTitle">Хочешь запуск под ключ?</div>
+            <div class="ctaText">Пиши в Telegram — покажу схему, как запускать и масштабировать.</div>
+          </div>
+          <a class="btn btnPrimary" href="https://t.me/dmitriy_ferixdi" target="_blank" rel="noopener">
+            Написать @dmitriy_ferixdi
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKETING -->
+    <section id="marketing" class="section alt">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Где это покупают: маркетинг, трафик, контент‑производство</h2>
+          <p>
+            Люди платят не за «нейросеть», а за <b>решение задач</b>.
+            Твоя витрина — это готовые кнопки под маркетинг.
+          </p>
+        </div>
+
+        <div class="useCases">
+          <div class="useCard">
+            <div class="useTop">
+              <div class="badge">Ads</div>
+              <h3>Креативы для рекламы</h3>
+            </div>
+            <p>Баннеры, UGC‑визуалы, тизеры, вариации под A/B. Быстро, массово, без дизайнера.</p>
+            <div class="chips">
+              <span>Static</span><span>4K</span><span>Brand style</span>
+            </div>
+          </div>
+
+          <div class="useCard">
+            <div class="useTop">
+              <div class="badge">Video</div>
+              <h3>Ролики под Reels/Shorts</h3>
+            </div>
+            <p>Text‑to‑Video, оживление фото, lip‑sync, клипы под офферы. Контент‑конвейер.</p>
+            <div class="chips">
+              <span>1080p</span><span>Image‑to‑Video</span><span>Voice/Lip</span>
+            </div>
+          </div>
+
+          <div class="useCard">
+            <div class="useTop">
+              <div class="badge">SEO</div>
+              <h3>Тексты и упаковка</h3>
+            </div>
+            <p>Карточки товара, лендинги, письма, описания, сценарии. Быстро и системно.</p>
+            <div class="chips">
+              <span>Copy</span><span>Landing</span><span>Email</span>
+            </div>
+          </div>
+
+          <div class="useCard">
+            <div class="useTop">
+              <div class="badge">Music</div>
+              <h3>Музыка и звук</h3>
+            </div>
+            <p>Фоновые треки, джинглы, озвучка, варианты под бренды и ролики.</p>
+            <div class="chips">
+              <span>Tracks</span><span>Jingles</span><span>Voice</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="split">
+          <div class="splitCard">
+            <h3>Что ты реально продаёшь</h3>
+            <ul class="check">
+              <li><b>Комфорт</b> (Telegram, русский, без VPN)</li>
+              <li><b>Скорость</b> (кнопка → результат)</li>
+              <li><b>Понятные пакеты</b> (лимиты, подписка, PRO)</li>
+              <li><b>Единый сервис</b> вместо 10 сайтов</li>
+            </ul>
+          </div>
+          <div class="splitCard">
+            <h3>Кому продаёшь</h3>
+            <ul class="check">
+              <li>Маркетологам и SMM</li>
+              <li>Агентствам и продакшенам</li>
+              <li>Блогерам и инфобизу</li>
+              <li>Малому бизнесу (витрина, объявления, офферы)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section id="stack" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Техчасть: это сервис, а не «темка»</h2>
+          <p>
+            На сайте показываем инженерную зрелость: предсказуемые списания, ошибки возвращают баланс,
+            очереди/асинхронность, логирование и метрики.
+          </p>
+        </div>
+
+        <div class="stackGrid">
+          <div class="stackCard">
+            <div class="stackTitle">🔁 Очереди и асинхронность</div>
+            <div class="stackText">Параллельные запросы, статусы, ожидание долгих генераций без «падения».</div>
+          </div>
+          <div class="stackCard">
+            <div class="stackTitle">🧾 Биллинг по факту успеха</div>
+            <div class="stackText">Списание только при успешной генерации. Ошибка модели → возврат баланса.</div>
+          </div>
+          <div class="stackCard">
+            <div class="stackTitle">🔐 Безопасность и контроль</div>
+            <div class="stackText">Ключи API, лимиты, анти‑фрод, журналирование, разграничение ролей.</div>
+          </div>
+          <div class="stackCard">
+            <div class="stackTitle">⚙️ Масштабирование</div>
+            <div class="stackText">Увеличение нагрузки — добавлением воркеров/очередей, без переписывания.</div>
+          </div>
+        </div>
+
+        <div class="codeBlock" role="region" aria-label="Пример логики маржи">
+<pre><code>// Пример логики цены (просто смысл)
+buyCost = 10 ₽      // себестоимость (Kie.ai)
+sellPrice = 20 ₽    // твоя витрина
+profit = sellPrice - buyCost  // прибыль с операции
+
+profitMonth = profit * requestsPerDay * 30
+</code></pre>
+          <div class="codeHint">Пользователь видит простую экономику и понимает, за что платит.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALC -->
+    <section id="calc" class="section alt">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Калькулятор прибыли</h2>
+          <p>Покажи цифры так, чтобы захотелось написать в Telegram сразу.</p>
+        </div>
+
+        <div class="calcGrid">
+          <div class="calcCard">
+            <div class="calcRow">
+              <label>
+                <span>Себестоимость (₽)</span>
+                <input id="cBuy" type="number" min="0" value="10" />
+              </label>
+              <label>
+                <span>Цена клиенту (₽)</span>
+                <input id="cSell" type="number" min="0" value="20" />
+              </label>
+            </div>
+
+            <div class="calcRow">
+              <label>
+                <span>Генераций в день</span>
+                <input id="cReq" type="number" min="0" value="120" />
+              </label>
+              <label>
+                <span>Дней в месяц</span>
+                <input id="cDays" type="number" min="1" value="30" />
+              </label>
+            </div>
+
+            <div class="calcResult">
+              <div class="r">
+                <div class="rk">Прибыль с генерации</div>
+                <div class="rv"><span id="rProfit">10</span> ₽</div>
+              </div>
+              <div class="r">
+                <div class="rk">Прибыль в день</div>
+                <div class="rv"><span id="rDay">1200</span> ₽</div>
+              </div>
+              <div class="r big">
+                <div class="rk">Прибыль в месяц</div>
+                <div class="rv"><span id="rMonth">36000</span> ₽</div>
+              </div>
+            </div>
+
+            <div class="calcHint">
+              * Это модель «на салфетке», чтобы понять масштаб. Реальные цифры зависят от пакетов/подписок.
+            </div>
+          </div>
+
+          <div class="calcCard neon">
+            <h3>Готов действовать?</h3>
+            <p>
+              Я покажу, как упаковать бота под рынок: тарифы, витрина, сценарии под маркетинг,
+              и как быстро запустить.
+            </p>
+
+            <div class="steps">
+              <div class="step"><span>1</span> Пишешь в Telegram</div>
+              <div class="step"><span>2</span> Получаешь схему запуска</div>
+              <div class="step"><span>3</span> Стартуешь продажи</div>
+            </div>
+
+            <a class="btn btnPrimary btnFull" href="https://t.me/dmitriy_ferixdi" target="_blank" rel="noopener">
+              Написать @dmitriy_ferixdi
+            </a>
+
+            <div class="micro">
+              Без ассистентов · без попап‑спама · один чёткий CTA.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footerGrid">
+        <div>
+          <div class="brandLine">
+            <span class="brandDot"></span>
+            <b>AI Future Brain</b>
+          </div>
+          <div class="fine">
+            Одностраничник для GitHub Pages. Цель: перейти в Telegram и написать.
+          </div>
+        </div>
+
+        <div class="footerLinks">
+          <a href="#logic">Логика</a>
+          <a href="#marketing">Маркетинг</a>
+          <a href="#stack">Техчасть</a>
+          <a href="#calc">Калькулятор</a>
+        </div>
+
+        <a class="btn btnGhost btnSmall" href="https://t.me/dmitriy_ferixdi" target="_blank" rel="noopener">
+          Telegram: @dmitriy_ferixdi
+        </a>
+      </div>
+    </footer>
+
+    <div class="stickyCta" id="stickyCta" role="region" aria-label="Быстрый CTA">
+      <div class="stickyInner">
+        <div class="stickyText">
+          <b>AI‑агрегатор 2026</b> · маржа ×2 · 50+ моделей · продавай доступ
+        </div>
+        <a class="btn btnPrimary btnSmall" href="https://t.me/dmitriy_ferixdi" target="_blank" rel="noopener">
+          Написать в Telegram
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
